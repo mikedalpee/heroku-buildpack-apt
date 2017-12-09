@@ -92,6 +92,7 @@ export PKG_CONFIG_PATH="\$HOME/.apt/usr/lib/x86_64-linux-gnu/pkgconfig:\$HOME/.a
 export QTDIR="\$HOME/.apt/usr/lib/x86_64-linux-gnu/qt5"
 export PATH="\$QTDIR/bin:\$PATH"
 export LD_LIBRARY_PATH="\$QTDIR/lib:\$LD_LIBRARY_PATH"
+export QT_SELECT=5
 EOF
 
 export PATH="$BUILD_DIR/.apt/usr/bin:$PATH"
@@ -104,6 +105,7 @@ export PKG_CONFIG_PATH="$BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/pkgconfig:$BUIL
 export QTDIR="$HOME/.apt/usr/lib/x86_64-linux-gnu/qt5"
 export PATH="$QTDIR/bin:$PATH"
 export LD_LIBRARY_PATH="$QTDIR/lib:$LD_LIBRARY_PATH"
+export QT_SELECT=5
 
 #give environment to later buildpacks
 export | grep -E -e ' (PATH|LD_LIBRARY_PATH|LIBRARY_PATH|INCLUDE_PATH|CPATH|CPPPATH|PKG_CONFIG_PATH)='  > "$LP_DIR/export"
