@@ -105,9 +105,5 @@ export | grep -E -e ' (PATH|LD_LIBRARY_PATH|LIBRARY_PATH|INCLUDE_PATH|CPATH|CPPP
 topic "Rewrite package-config files"
 find $BUILD_DIR/.apt -type f -ipath '*/pkgconfig/*.pc' | xargs --no-run-if-empty -n 1 sed -i -e 's!^prefix=\(.*\)$!prefix='"$BUILD_DIR"'/.apt\1!g'
 topic "QT Versions"
-which qtchooser
-qtchooser -list-versions
-find $BUILD_DIR/.apt -name "qmake"
-rm $BUILD_DIR/.apt/usr/bin/qmake
-ln -s $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/bin/qmake $BUILD_DIR/.apt/usr/bin/qmake
+export QTDIR=$BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5
 qmake -v
