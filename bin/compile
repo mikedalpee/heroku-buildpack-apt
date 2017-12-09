@@ -76,6 +76,7 @@ mkdir -p $BUILD_DIR/.apt
 touch $APT_STATE_DIR/status
 mkdir $APT_STATE_DIR/updates
 mkdir $APT_STATE_DIR/triggers
+export PATH=/usr/local/sbin:/usr/sbin:/sbin:$PATH
 
 for DEB in $(ls -1 $APT_CACHE_DIR/archives/*.deb); do
   topic "Installing $(basename $DEB)"
