@@ -109,5 +109,4 @@ which qtchooser
 qtchooser -list-versions
 find $BUILD_DIR/.apt -name "qmake"
 alias qmake=$BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
-qmake
-a
+qmake -v
