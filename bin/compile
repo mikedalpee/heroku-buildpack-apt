@@ -122,4 +122,4 @@ EOF
 
 cat $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qtchooser/default.conf
 
-qmake --version
+qmake -qt=qt5 --version
