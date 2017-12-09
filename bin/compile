@@ -108,7 +108,7 @@ topic "QT Versions"
 which qtchooser
 qtchooser -list-versions
 find $BUILD_DIR/.apt -name "qmake"
-$BUILD_DIR/.apt/t/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
+$BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
 qmake
-qtchooser -install $BUILD_DIR/.apt/t/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
+qtchooser -install $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
 qmake
