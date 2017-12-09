@@ -73,6 +73,7 @@ for PACKAGE in $(cat $BUILD_DIR/Aptfile | grep -v -s -e "^:repo:"); do
 done
 
 mkdir -p $BUILD_DIR/.apt
+chmod a+rwx $BUILD_DIR/.apt
 touch $APT_STATE_DIR/status
 mkdir $APT_STATE_DIR/updates
 mkdir $APT_STATE_DIR/triggers
