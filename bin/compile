@@ -4,6 +4,5 @@
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-add-apt-repository "deb http://archive.ubuntu.com/ubuntu trusty universe"
-add-apt-repository "deb http://archive.ubuntu.com/ubuntu trusty main"
+apt-get updated
 apt-get install qt5-default libqt5webkit5-dev qtdeclarative5-dev
