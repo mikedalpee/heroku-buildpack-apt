@@ -76,7 +76,7 @@ mkdir -p $BUILD_DIR/.apt
 
 for DEB in $(ls -1 $APT_CACHE_DIR/archives/*.deb); do
   topic "Installing $(basename $DEB)"
-  dpkg -i --force-not-root -admindir=$APT_STATE_DIR -instdir=$BUILD_DIR/.apt $DEB
+  dpkg -i --force-not-root --admindir=$APT_STATE_DIR --instdir=$BUILD_DIR/.apt $DEB
 done
 
 topic "Writing profile script"
